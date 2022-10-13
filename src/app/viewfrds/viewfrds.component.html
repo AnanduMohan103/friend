@@ -13,13 +13,13 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                      <tr *ngFor="let i of frdsData">
+                        <td>{{i._id}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.friendName}}</td>
+                        <td>{{i.friendNickName}}</td>
+                        <td>{{i.DescribeYourFriend}}</td>
+                       
                       </tr>
                      
                     </tbody>

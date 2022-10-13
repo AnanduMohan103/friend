@@ -6,7 +6,17 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
 import { ViewfrdsComponent } from './viewfrds/viewfrds.component';
-
+import { RouterModule, Routes } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+const appRoutes:Routes=[
+  {
+    path:"",component:AddfriendComponent
+  },
+  {
+    path:"view",component:ViewfrdsComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +26,10 @@ import { ViewfrdsComponent } from './viewfrds/viewfrds.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
